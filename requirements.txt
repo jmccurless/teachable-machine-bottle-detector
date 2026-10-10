@@ -1,0 +1,16 @@
+# Python 3.12 — TensorFlow does not publish wheels for every newer version.
+#
+# These are the exact versions this pipeline was built and demoed on. If you
+# are reproducing it and something breaks, pin to these before debugging
+# anything else; see TIPS-AND-BOTTLENECKS.md for why the Keras pins matter.
+
+tensorflow==2.21.0
+
+# The Keras 2 compatibility package. Teachable Machine exports Keras 2 models,
+# and Keras 3 (which ships inside TensorFlow now) cannot load them at all.
+# The main script sets TF_USE_LEGACY_KERAS=1 and imports from tf_keras.
+tf-keras==2.21.0
+
+opencv-python==5.0.0.93
+numpy==2.5.3
+pyserial==3.5
